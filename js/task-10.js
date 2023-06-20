@@ -23,12 +23,9 @@ function onCreateBoxes(amount) {
     containerEl.insertAdjacentHTML("afterbegin", '<div class="box">fgh</div>');
   }
 
-  // const boxEl = document.querySelectorAll(".box");
-  // boxEl[0].style.width = "30px";
-  // boxEl[0].style.height = "30px";
   for (let i = 0; i < containerEl.children.length; i += 1) {
-    containerEl.children[i].style.width = "30px";
-    containerEl.children[i].style.height = "30px";
+    containerEl.children[i].style.width = `${30 + i * 10}px`;
+    containerEl.children[i].style.height = `${30 + i * 10}px`;
     containerEl.children[i].style.backgroundColor = getRandomHexColor();
   }
 }
