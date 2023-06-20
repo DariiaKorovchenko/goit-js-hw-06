@@ -14,13 +14,14 @@ destroyButtonEl.addEventListener("click", onDesrtoyBoxes);
 
 function onDesrtoyBoxes(event) {
   containerEl.innerHTML = "";
+  amountOfBoxes.value = 0;
 }
 
 function onCreateBoxes(amount) {
   amount = amountOfBoxes.value;
 
   for (let i = 0; i < amount; i += 1) {
-    containerEl.insertAdjacentHTML("afterbegin", '<div class="box">fgh</div>');
+    containerEl.insertAdjacentHTML("afterbegin", '<div class="box"></div>');
   }
 
   for (let i = 0; i < containerEl.children.length; i += 1) {
